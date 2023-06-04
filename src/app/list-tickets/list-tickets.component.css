@@ -1,0 +1,12 @@
+mat-card {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 16px;
+  padding: 16px;
+}
+mat-card[bg-blue] {
+  background-color: #2196F3;
+  color: #FFFFFF;
+}
+
