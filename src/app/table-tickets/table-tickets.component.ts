@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {MatTableDataSource} from "@angular/material/table";
+import {UserService} from "../user.service";
+import {MatRadioChange} from "@angular/material/radio";
 
 @Component({
   selector: 'app-table-tickets',
@@ -8,19 +10,24 @@ import {MatTableDataSource} from "@angular/material/table";
 })
 export class TableTicketsComponent implements OnInit{
 
-  displayedColumns: string[] = ['id', 'title', 'description', 'status', 'actions'];
-  dataSource = new MatTableDataSource([
-    {id: 1, title: 'Ticket 1', description: 'Description 1', status: 'Open'},
-    {id: 2, title: 'Ticket 2', description: 'Description 2', status: 'Open'},
-    {id: 3, title: 'Ticket 3', description: 'Description 3', status: 'Open'},
-    {id: 4, title: 'Ticket 4', description: 'Description 4', status: 'Open'},
-    {id: 5, title: 'Ticket 5', description: 'Description 5', status: 'Open'},
-    {id: 6, title: 'Ticket 6', description: 'Description 6', status: 'Open'},
-  ])
+   ALL_DATA = [
+    {id:"1",title:"ticket1",description:"ticket-description1",status:"ok",actions: "button1"},
+     {id:"2",title:"ticket2",description:"ticket-description2",status:"ok",actions: "button2"},
+     {id:"3",title:"ticket3",description:"ticket-description3",status:"ok",actions: "button3"},
+     {id:"4",title:"ticket4",description:"ticket-description4",status:"ok",actions: "button4"},
+     {id:"5",title:"ticket5",description:"ticket-description5",status:"ok",actions: "button5"},
+     {id:"6",title:"ticket6",description:"ticket-description6",status:"ok",actions: "button6"},
+   ]
+  displayedColumns: string[] = ['id', 'title','actions'];
+  dataSource= this.ALL_DATA
   constructor(private userService: UserService) {
 
   }
   ngOnInit(): void {
   }
 
+  applyAction($event: MatRadioChange) {
+
+
+  }
 }

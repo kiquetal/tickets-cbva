@@ -8,6 +8,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSlideToggleModule} from "@angular/material/slide-toggle";
 import {MatCardModule} from "@angular/material/card";
 import { TableTicketsComponent } from './table-tickets/table-tickets.component';
+import {MatTableModule} from "@angular/material/table";
+import {MatRadioModule} from "@angular/material/radio";
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { TableTicketsComponent } from './table-tickets/table-tickets.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatSlideToggleModule,
-    MatCardModule
+    MatCardModule,
+    MatTableModule,
+    MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]
