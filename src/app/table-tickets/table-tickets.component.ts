@@ -9,7 +9,6 @@ import {MatRadioChange} from "@angular/material/radio";
   styleUrls: ['./table-tickets.component.css']
 })
 export class TableTicketsComponent implements OnInit{
-
    ALL_DATA = [
     {id:"1",title:"ticket1",description:"ticket-description1",status:"ok",actions: "button1"},
      {id:"2",title:"ticket2",description:"ticket-description2",status:"ok",actions: "button2"},
