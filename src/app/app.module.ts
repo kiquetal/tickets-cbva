@@ -10,12 +10,19 @@ import {MatCardModule} from "@angular/material/card";
 import { TableTicketsComponent } from './table-tickets/table-tickets.component';
 import {MatTableModule} from "@angular/material/table";
 import {MatRadioModule} from "@angular/material/radio";
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { SignInComponent } from './sign-up/sign-in/sign-in.component';
+import {MatInputModule} from "@angular/material/input";
+import {MatButtonModule} from "@angular/material/button";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
     AppComponent,
     ListTicketsComponent,
-    TableTicketsComponent
+    TableTicketsComponent,
+    SignUpComponent,
+    SignInComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +31,10 @@ import {MatRadioModule} from "@angular/material/radio";
     MatSlideToggleModule,
     MatCardModule,
     MatTableModule,
-    MatRadioModule
+    MatRadioModule,
+    MatInputModule,
+    MatButtonModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
