@@ -1,11 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {MatTableDataSource} from "@angular/material/table";
-<<<<<<< HEAD
-import {UserService} from "../user.service";
 import {MatRadioChange} from "@angular/material/radio";
-=======
 import {User, UserService} from "../user.service";
->>>>>>> d79c9eb (Starting the login page)
 
 @Component({
   selector: 'app-table-tickets',
@@ -13,7 +9,6 @@ import {User, UserService} from "../user.service";
   styleUrls: ['./table-tickets.component.css']
 })
 export class TableTicketsComponent implements OnInit{
-<<<<<<< HEAD
    ALL_DATA = [
     {id:"1",title:"ticket1",description:"ticket-description1",status:"ok",actions: "button1"},
      {id:"2",title:"ticket2",description:"ticket-description2",status:"ok",actions: "button2"},
@@ -24,18 +19,14 @@ export class TableTicketsComponent implements OnInit{
    ]
   displayedColumns: string[] = ['id', 'title','actions'];
   dataSource= this.ALL_DATA
-=======
 
-  displayedColumns: string [] = ['id','name','email']
-  dataSource = new MatTableDataSource<User>([])
->>>>>>> d79c9eb (Starting the login page)
   constructor(private userService: UserService) {
 
   }
   ngOnInit(): void {
     this.userService.users.subscribe(users => {
       console.log(users)
-      this.dataSource.data = users
+
     })
   }
 
